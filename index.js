@@ -10,6 +10,10 @@ app.use(express.json());
 
 //Routes
 
+app.get('/', (req, res)=> {
+    res.send(`<h1>Welcome to my express app</h1>`)
+})
+
 app.use("/api/users", userRoutes);
 
 app.listen(PORT, () => {
